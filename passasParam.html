@@ -1,0 +1,18 @@
+<script>
+
+    function responseFunc(fun1) {
+        fun1();
+    }
+
+    var d = new Date();
+    var n = d.getHours();
+    if(n<12){
+        responseFunc(function () { alert("good morning!"); });
+    }
+    else{
+        responseFunc(function () { alert("good evening!"); });
+    }
+
+
+
+</script>

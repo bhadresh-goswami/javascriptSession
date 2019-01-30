@@ -1,0 +1,49 @@
+<script>
+
+    // function task1(){
+    //   console.log("this is task1!");
+    // }
+    // function task2(){
+    //   console.log("this is task2!");
+    // }
+
+    // task1();
+    // task2();
+
+
+    //using time interval
+
+
+    // function task3(){
+    //   setTimeout( function(){
+    //     console.log("task 3 running!");
+    //   }, 500 );
+    // }
+    // function task4(){
+    //   console.log("task 4 running!");
+    // }
+
+    // task3();
+    // task4();
+
+
+    //now create a callback for this
+    function taskRun(task, callback) {
+        callback();        
+        console.log(`${task} from outter is running!`);
+    }
+
+    taskRun('task 1', function () {
+       
+        taskRun('task 3',function(){
+
+            console.log(`task 4 is running!`);    
+
+        });
+
+        console.log(`task 2 is running!`);
+
+    });
+
+
+</script>
